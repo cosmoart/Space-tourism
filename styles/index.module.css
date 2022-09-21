@@ -1,0 +1,97 @@
+/* --------------------------- */
+#bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+#body {
+	width: 10rem;
+	height: 5rem;
+	text-align: center;
+}
+.main {
+	margin-top: 17.5%;
+	margin-left: 11.5%;
+}
+.main p {
+	max-width: 29rem;
+	line-height: 32px;
+	color: #d0d6f9;
+	font-size: 18px;
+	padding-top: 5px;
+	letter-spacing: 1px;
+	width: 444px;
+	word-spacing: 2px;
+	padding-left: 2px;
+}
+.title {
+	text-transform: uppercase;
+	letter-spacing: 4.72px;
+	font-size: 28px;
+	font-weight: normal;
+	color: #d0d6f9;
+}
+.title span {
+	font-family: "Bellefair";
+	font-size: 150px;
+	letter-spacing: 0;
+	color: white;
+	padding-top: 23px;
+	display: inline-block;
+}
+.exploreBtn {
+	display: grid;
+	place-items: center;
+	width: 17rem;
+	height: 17rem;
+	background: white;
+	border-radius: 100%;
+	position: absolute;
+	bottom: 14.5%;
+	right: 11.5%;
+	font-family: "Bellefair";
+	text-transform: uppercase;
+	font-size: 32px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+.exploreBtn::after {
+	content: "";
+	position: absolute;
+	background: white;
+	opacity: 0.5;
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	transition: transform 0.5s ease;
+	z-index: -5;
+}
+.exploreBtn:hover::after {
+	animation: pulse 1s infinite;
+}
+@keyframes pulse {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1.4);
+	}
+	70% {
+		transform: translate(-50%, -50%) scale(1.2);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+/* @media (min-width:320px) 20em  { /* smartphones, iPhone, portrait 480x320 phones
+@media (min-width:481px) 30em  { /* portrait e-readers (Nook/Kindle), smaller tablets
+@media (min-width:641px) 40em { /* portrait tablets, portrait iPad, landscape e-readers
+@media (min-width:961px) 60em  { /* tablet, landscape iPad, lo-res laptops ands desktops
+@media (min-width:1025px) 64em { /* big landscape tablets, laptops, and desktops
+@media (min-width:1281px) 80em { /* hi-res laptops and desktops */
