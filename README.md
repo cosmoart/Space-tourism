@@ -7,9 +7,9 @@
 <a href="https://www.discord.com/users/734087835472232559/"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 <a href="https://twitter.com/CosmoArt0"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" /></a>
 
-# Frontend Mentor - Testimonials grid section solution
+# Space tourism website
 
-This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
 [Solution][solution-url] . [Live Page][live-page]
 
@@ -66,13 +66,10 @@ Users should be able to:
 
 ### Built with
 
--   Semantic HTML5 markup
--   CSS custom properties
--   Flexbox
--   CSS Grid
 -   Mobile-first workflow
+-   Semantic HTML5 markup
 -   [React](https://reactjs.org/) - JS library
--   [Styled Components](https://styled-components.com/) - For styles
+-   [Nextjs](https://nextjs.org)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

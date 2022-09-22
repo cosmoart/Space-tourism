@@ -1,0 +1,27 @@
+.crewMain {
+	display: flex;
+	margin: auto;
+	max-width: 80rem;
+	padding: 2rem;
+}
+.hidden {
+	display: none;
+}
+.crewName {
+	text-transform: uppercase;
+	font-family: "Bellefair", system-ui;
+}
+.crewName span {
+	font-size: 40px;
+}
+.crewName + p {
+	max-width: 40rem;
+}
+.crewBtn {
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	background: white;
+	cursor: pointer;
+	border: none;
+}

@@ -1,11 +1,5 @@
 :root {
-	--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-	--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-	--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-
-	--color-text: hsl(12, 5%, 4%);
-	--color-bg: hsl(10, 21%, 95%);
-	--color-border: hsl(17, 24%, 90%);
+	--color-text: #d0d6f9;
 }
 
 @font-face {
@@ -30,12 +24,51 @@ body {
 	font-family: "BarlowCondensed", system-ui;
 	color: white;
 	font-weight: 400;
-	background-color: rgb(24, 24, 24);
+	background-color: #181929;
 }
-.home {
-	position: absolute;
-	z-index: -1000;
-	top: 0;
-	left: 0;
-	background-color: rgb(24, 24, 24);
+.subtitle {
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 4.72px;
+	font-size: clamp(20px, 1.6vw, 28px);
+}
+.subtitle span {
+	opacity: 0.25;
+}
+.paragraph {
+	color: var(--color-text);
+	max-width: 28.5rem;
+	line-height: 32px;
+	font-size: clamp(15px, 1.2vw, 18px);
+	letter-spacing: 1px;
+	word-spacing: 2px;
+}
+.mainPage {
+	padding: 0 3rem;
+	margin: auto;
+	max-width: 75rem;
+	height: 80vh;
+}
+li {
+	list-style: none;
+}
+
+/* ============ SCROLL-BAR ========= */
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: #1f1f27;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgb(255, 255, 255);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(184, 184, 184);
 }

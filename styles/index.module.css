@@ -11,14 +11,16 @@
 	text-align: center;
 }
 .main {
-	margin-top: 17.5%;
-	margin-left: 11.5%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
 }
 .main p {
 	max-width: 29rem;
 	line-height: 32px;
 	color: #d0d6f9;
-	font-size: 18px;
+	font-size: clamp(15px, 1.2vw, 18px);
 	padding-top: 5px;
 	letter-spacing: 1px;
 	width: 444px;
@@ -28,13 +30,13 @@
 .title {
 	text-transform: uppercase;
 	letter-spacing: 4.72px;
-	font-size: 28px;
+	font-size: clamp(16px, 1.5vw, 28px);
 	font-weight: normal;
 	color: #d0d6f9;
 }
 .title span {
 	font-family: "Bellefair";
-	font-size: 150px;
+	font-size: clamp(110px, 1.5vw, 150px);
 	letter-spacing: 0;
 	color: white;
 	padding-top: 23px;
@@ -43,20 +45,18 @@
 .exploreBtn {
 	display: grid;
 	place-items: center;
-	width: 17rem;
-	height: 17rem;
+	width: 15rem;
+	height: 15rem;
 	background: white;
 	border-radius: 100%;
-	position: absolute;
-	bottom: 14.5%;
-	right: 11.5%;
 	font-family: "Bellefair";
 	text-transform: uppercase;
-	font-size: 32px;
+	font-size: clamp(23px, 1.9vw, 32px);
 	font-weight: bold;
 	color: black;
 	text-decoration: none;
 	letter-spacing: 2px;
+	position: relative;
 }
 .exploreBtn::after {
 	content: "";
@@ -89,12 +89,40 @@
 		transform: translate(-50%, -50%) scale(1);
 	}
 }
-/* @media (min-width:320px) 20em  { /* smartphones, iPhone, portrait 480x320 phones
+/*
+@media (min-width:320px) 20em  { /* smartphones, iPhone, portrait 480x320 phones
 @media (min-width:481px) 30em  { /* portrait e-readers (Nook/Kindle), smaller tablets
 @media (min-width:641px) 40em { /* portrait tablets, portrait iPad, landscape e-readers
 @media (min-width:961px) 60em  { /* tablet, landscape iPad, lo-res laptops ands desktops
 @media (min-width:1025px) 64em { /* big landscape tablets, laptops, and desktops
-@media (min-width:1281px) 80em { /* hi-res laptops and desktops */
-
-@media (min-width: 80em) {
+@media (min-width:1281px) 80em { /* hi-res laptops and desktops
+*/
+@media (min-width: 50em) {
+	.main {
+		display: block;
+		text-align: left;
+		margin-top: 12%;
+		margin-left: 8%;
+	}
+	.exploreBtn {
+		position: absolute;
+		bottom: 14.5%;
+		right: 11.5%;
+	}
+}
+@media (min-width: 60em) {
+	.main {
+		margin-top: 11%;
+		margin-left: 9%;
+	}
+}
+@media (min-width: 83em) {
+	.main {
+		margin-top: 17.5%;
+		margin-left: 11.5%;
+	}
+	.exploreBtn {
+		width: 17rem;
+		height: 17rem;
+	}
 }

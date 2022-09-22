@@ -1,0 +1,21 @@
+.mainTech {
+	display: flex;
+	margin: auto;
+	max-width: 80rem;
+	padding: 2rem;
+}
+.hidden {
+	display: none;
+}
+.techBtn {
+	width: 4rem;
+	height: 4rem;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background: none;
+	border-radius: 100%;
+	color: white;
+	cursor: pointer;
+}
+.techBtn:hover {
+	border: 1px solid rgba(255, 255, 255);
+}
