@@ -4,18 +4,21 @@ export default function Background({ bgMobile, bgTablet, bgDesktop }) {
 			{`
 				body {
 					background: url(${bgMobile});
-					background-size: cover;
+					background-size: 100vw 100vh;
+					background-attachment: fixed;
 				}
 				@media (min-width: 40em) {
 					body {
 						background: url(${bgTablet});
-						background-size: cover;
+						background-size: 100vw 100vh;
+						background-attachment: fixed;
 					}
 				}
-				@media (min-width: 64em) {
+				@media (min-width: 50em) {
 					body {
 						background: url(${bgDesktop});
-						background-size: cover;
+						background-size: 100vw 100vh;
+						background-attachment: fixed;
 					}
 				}
 				`}

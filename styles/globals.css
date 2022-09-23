@@ -26,19 +26,25 @@ body {
 	font-weight: 400;
 	background-color: #181929;
 }
-.subtitle {
+.title {
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: 4.72px;
 	font-size: clamp(20px, 1.6vw, 28px);
 }
-.subtitle span {
+.title span {
 	opacity: 0.25;
+}
+.subtitle {
+	font-family: "Bellefair", system-ui;
+	text-transform: uppercase;
+	font-size: clamp(35px, 3vw, 40px);
+	margin: 10px 0;
 }
 .paragraph {
 	color: var(--color-text);
 	max-width: 28.5rem;
-	line-height: 32px;
+	line-height: clamp(22px, 2.3vw, 28px);
 	font-size: clamp(15px, 1.2vw, 18px);
 	letter-spacing: 1px;
 	word-spacing: 2px;
@@ -62,10 +68,8 @@ li {
 ::-webkit-scrollbar-track {
 	background: #1f1f27;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	border-radius: 10px;
 	background: rgb(255, 255, 255);
 }
 /* Handle on hover */

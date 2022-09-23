@@ -5,7 +5,7 @@ import bgMobile from "../assets/home/background-home-mobile.jpg"
 import bgTablet from "../assets/home/background-home-tablet.jpg"
 import bgDesktop from "../assets/home/background-home-desktop.jpg"
 import Link from "next/link"
-import Background from "./helpers/globalbg"
+import Background from "./helpers/bodyBackground"
 
 export default function NotFound() {
 	return (

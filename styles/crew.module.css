@@ -3,6 +3,19 @@
 	margin: auto;
 	max-width: 80rem;
 	padding: 2rem;
+	overflow: hidden;
+	position: relative;
+	height: 70vh;
+}
+.crewMain nav {
+	display: flex;
+	gap: 1rem;
+}
+.crewMain [class*="-card"] {
+	transition: 0.3s ease-in-out;
+}
+.crewMain [class*="-img"] {
+	transition: 0.3s ease-in-out;
 }
 .hidden {
 	display: none;
@@ -22,6 +35,17 @@
 	width: 15px;
 	height: 15px;
 	background: white;
+	opacity: 0.17;
 	cursor: pointer;
 	border: none;
+}
+.crewBtn:hover {
+	opacity: 0.5;
+}
+.crewImages > div {
+	position: absolute;
+}
+.sliderBottom {
+	bottom: -10rem;
+	opacity: 0;
 }

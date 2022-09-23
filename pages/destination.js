@@ -2,35 +2,23 @@ import Image from "next/image";
 import Layout from "../components/Layout";
 import data from "../assets/data";
 import styles from "../styles/destination.module.css"
-import Background from "./helpers/globalbg";
+import Background from "./helpers/bodyBackground";
 
 import bgMobile from "../assets/destination/background-destination-mobile.jpg"
 import bgTablet from "../assets/destination/background-destination-tablet.jpg"
 import bgDesktop from "../assets/destination/background-destination-desktop.jpg"
+import handleLinks from "./helpers/linksAnimation";
 
 export default function Destination() {
-
-	function handleLinks(e) {
-		document.querySelectorAll(`[class*="-card"]`).forEach((card) => {
-			if (String(card.classList).includes(e.target.textContent)) {
-				card.classList.remove(styles.sliderRight);
-			} else {
-				card.classList.add(styles.sliderRight);
-			}
-		});
-		document.querySelectorAll(`[class*="-img"]`).forEach(img => {
-			if (String(img.classList).includes(e.target.textContent)) {
-				img.classList.remove(styles.planetImgHidden);
-			} else {
-				img.classList.add(styles.planetImgHidden);
-			}
-		})
-	}
+	const linksInfo = [
+		{ className: `[class*="-card"]`, hidden: styles.sliderRight },
+		{ className: `[class*="-img"]`, hidden: styles.planetImgHidden }
+	]
 
 	return (
 		<Layout title="Space tourism | Destination">
 			<main className="mainPage">
-				<h1 className="subtitle"><span>01</span> Pick your destination</h1>
+				<h1 className="title"><span>01</span> Pick your destination</h1>
 				<div className={styles.planetsMain}>
 					<div className={styles.planetsImages}>
 						{
@@ -51,7 +39,7 @@ export default function Destination() {
 						<nav className={styles.planetsNav}>
 							<ul>
 								{
-									data.planets.map((planet) => <li key={planet.distance}><button onClick={handleLinks}>{planet.name}</button></li>)
+									data.planets.map((planet) => <li key={planet.distance}><button onClick={e => handleLinks(e, linksInfo)} value={planet.name}>{planet.name}</button></li>)
 								}
 							</ul>
 						</nav>

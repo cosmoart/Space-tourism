@@ -1,7 +1,7 @@
-import Link from 'next/link';
+import Link from 'next/link'
 import styles from '../styles/index.module.css'
 import Layout from '../components/Layout'
-import Background from './helpers/globalbg';
+import Background from './helpers/bodyBackground'
 
 import bgMobile from "../assets/home/background-home-mobile.jpg"
 import bgTablet from "../assets/home/background-home-tablet.jpg"

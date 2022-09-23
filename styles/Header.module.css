@@ -1,21 +1,48 @@
-.hidden {
-	display: none;
-}
 .header {
-	margin-left: 2rem;
+	margin: 15px 20px;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
 	align-items: center;
 }
-.closeBtn {
+.navContainer nav {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	backdrop-filter: blur(40px);
+	top: 0;
+	right: -100%;
+	background: rgba(255, 255, 255, 4%);
+	display: flex;
+	align-items: center;
+	transition: right 0.2s ease-in-out;
+	overflow: hidden;
+}
+.navContainer {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	overflow: hidden;
+	width: clamp(13rem, 35%, 20rem);
+}
+.navContainer nav ul {
+	display: flex;
+	gap: 1.3rem;
+	padding: 1rem 2rem;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+.menuBtn {
 	width: 30px;
 	height: 30px;
 	background: none;
 	border: none;
-	position: relative;
 	cursor: pointer;
+	position: fixed;
+	right: 0;
 	margin-right: 10px;
+	z-index: 80;
 }
 .navMobile {
 	position: absolute;
@@ -28,79 +55,83 @@
 	flex-direction: column;
 }
 .navShow {
-	right: 0;
-}
-.navHidden {
-	right: -100%;
+	right: 0 !important;
 }
 .top0 {
 	top: 0;
 }
 .logo {
 	object-fit: contain;
-	width: 40px;
-}
-.header nav {
-	overflow: hidden;
-	background: rgba(255, 255, 255, 4%);
-}
-.header ul {
-	display: flex;
-	gap: 1rem;
-	padding: 1rem;
-	justify-content: space-evenly;
+	width: 30px;
 }
 .header span {
 	font-weight: bold;
 }
 .header li {
 	list-style: none;
-	font-size: 16px;
+	font-size: clamp(15px, 3vw, 16px);
 	text-transform: uppercase;
 	position: relative;
-}
-.header li::after {
-	content: "";
-	height: 2px;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	background: white;
-	bottom: -2.8rem;
-	transition: bottom 0.2s ease-in-out;
-}
-.header li:hover::after {
-	bottom: -2.5rem;
 }
 .header a {
 	color: white;
 	text-decoration: none;
 	letter-spacing: 2.7px;
 }
-.header a:hover {
-	opacity: 0.8;
-}
+
 @media (min-width: 50em) {
 	.header {
-		margin-top: 1.5rem;
+		margin: 1.5rem 0 0 2rem;
 	}
-	.header ul {
-		padding: 1rem;
+	.header li::after {
+		content: "";
+		height: 2px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		background: white;
+		bottom: -2.8rem;
+		transition: bottom 0.2s ease-in-out;
 	}
-	.header nav {
+	.header li:hover::after {
+		bottom: -2.5rem;
+	}
+	.header a:hover {
+		opacity: 0.8;
+	}
+	.navContainer {
+		height: auto;
+		width: auto;
+		position: static;
+		width: 70%;
+		z-index: 50 !important;
+	}
+	.navContainer nav {
 		backdrop-filter: blur(40px);
-		width: 60%;
+		position: static;
+		height: auto;
+		display: block;
+	}
+	.navContainer nav ul {
+		padding: 1rem 2rem;
+		flex-direction: row;
 	}
 	.header::after {
 		content: "";
 		position: absolute;
-		width: 36%;
+		width: 33%;
 		height: 1px;
 		background: white;
 		top: 50%;
 		left: 4rem;
 		transform: translateY(-50%);
 		z-index: 5;
+	}
+	.menuBtn {
+		display: none;
+	}
+	.logo {
+		width: auto;
 	}
 }
 
