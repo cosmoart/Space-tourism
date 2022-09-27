@@ -1,3 +1,10 @@
+.imgHidden {
+	display: none;
+}
+.sliderHidden {
+	display: none;
+}
+
 .main {
 	display: flex;
 	gap: 2rem;

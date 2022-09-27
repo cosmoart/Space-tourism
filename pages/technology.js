@@ -7,19 +7,9 @@ import Background from "./helpers/bodyBackground";
 import bgMobile from "../assets/technology/background-technology-mobile.jpg"
 import bgTablet from "../assets/technology/background-technology-tablet.jpg"
 import bgDesktop from "../assets/technology/background-technology-desktop.jpg"
+import handleLinks from "./helpers/linksAnimation";
 
 export default function Technology() {
-
-	function handleLinks(e) {
-		document.querySelectorAll(`[class*="-card"]`).forEach((card) => {
-			if (String(card.classList).includes(e.target.value)) {
-				card.classList.remove(styles.hidden);
-			} else {
-				card.classList.add(styles.hidden);
-			}
-		});
-	}
-
 	return (
 		<Layout title="Space tourism | Technology">
 			<main className="mainPage">
@@ -31,8 +21,9 @@ export default function Technology() {
 								return (
 									<button
 										key={technology.name + "button"}
-										className={styles.techBtn} value={technology.name}
-										onClick={handleLinks}
+										className={styles.techBtn}
+										value={technology.name}
+										onClick={e => handleLinks(e, styles)}
 									>
 										{i + 1}
 									</button>
@@ -45,7 +36,7 @@ export default function Technology() {
 							data.technologies.map((technology, i) => (
 								<article
 									key={technology.name}
-									className={`${technology.name}-card ${i === 0 ? "" : styles.hidden}`}
+									className={`${technology.name}-card ${i === 0 ? "" : styles.sliderHidden}`}
 								>
 									<p>The terminology...</p>
 									<h2 className="subtitle">{technology.name}</h2>
@@ -60,7 +51,7 @@ export default function Technology() {
 								return (
 									<div
 										key={technology.name + "img"}
-										className={`${i === 0 ? "" : styles.hidden}`}
+										className={`${technology.name}-img ${i === 0 ? "" : styles.imgHidden}`}
 									>
 										<Image src={technology.images.portrait} alt={technology.name} placeholder="blur" />
 									</div>

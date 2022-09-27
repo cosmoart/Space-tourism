@@ -1,34 +1,40 @@
 .crewMain {
 	display: flex;
+	flex-direction: column;
 	margin: auto;
 	max-width: 80rem;
-	padding: 2rem;
 	overflow: hidden;
 	position: relative;
-	height: 70vh;
+	height: 100%;
+	text-align: center;
+	gap: 1rem;
 }
 .crewMain nav {
 	display: flex;
 	gap: 1rem;
 }
+.crewInfo {
+	height: 55%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .crewMain [class*="-card"] {
 	transition: 0.3s ease-in-out;
 }
-.crewMain [class*="-img"] {
-	transition: 0.3s ease-in-out;
-}
-.hidden {
+.sliderHidden {
 	display: none;
 }
 .crewName {
 	text-transform: uppercase;
 	font-family: "Bellefair", system-ui;
 }
-.crewName span {
-	font-size: 40px;
+.crewName span:first-child {
+	font-size: clamp(17px, 3vw, 20px);
+	opacity: 0.5;
 }
-.crewName + p {
-	max-width: 40rem;
+.crewName span:last-child {
+	font-size: clamp(27px, 5vw, 40px);
 }
 .crewBtn {
 	border-radius: 100%;
@@ -42,10 +48,52 @@
 .crewBtn:hover {
 	opacity: 0.5;
 }
+.linkActive {
+	opacity: 1 !important;
+}
+.crewImages {
+	height: 45%;
+	order: -1;
+	position: relative;
+}
 .crewImages > div {
 	position: absolute;
 }
-.sliderBottom {
-	bottom: -10rem;
+.crewImg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease-in-out;
+	border-bottom: 1px solid #383b4b;
+}
+.crewImg img {
+	object-fit: contain;
+}
+.crewImg * {
+	position: static !important;
+}
+.imgHidden {
+	transform: translateY(10rem);
 	opacity: 0;
+	z-index: -10;
+}
+@media (min-width: 50em) {
+	.crewMain {
+		flex-direction: row;
+		text-align: left;
+	}
+	.crewMain nav {
+		order: 2;
+	}
+	.crewImages {
+		width: 50%;
+		height: auto;
+		order: initial;
+	}
+	.crewImg {
+		border-bottom: none;
+	}
+	.crewInfo {
+		align-items: flex-start;
+	}
 }

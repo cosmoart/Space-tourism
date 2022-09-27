@@ -1,11 +1,11 @@
+import Link from "next/link"
 import Layout from "../components/Layout"
 import styles from "../styles/404.module.css"
+import Background from "./helpers/bodyBackground"
 
 import bgMobile from "../assets/home/background-home-mobile.jpg"
 import bgTablet from "../assets/home/background-home-tablet.jpg"
 import bgDesktop from "../assets/home/background-home-desktop.jpg"
-import Link from "next/link"
-import Background from "./helpers/bodyBackground"
 
 export default function NotFound() {
 	return (

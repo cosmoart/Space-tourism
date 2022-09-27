@@ -13,7 +13,7 @@ export default function Layout({ children, title = "Space tourism" }) {
 				{/* <!-- Meta --> */}
 				<meta name="author" content="CosmoArt" />
 				<meta name="theme-color" content="#181929" />
-				<meta name="description" content="Solution to the Frontend Mentor challenge, code by Cosmo Art" />
+				<meta name="description" content="" />
 				<meta name="robots" content="index, nofollow" />
 
 				{/* <!-- Open Graph --> */}
@@ -21,7 +21,7 @@ export default function Layout({ children, title = "Space tourism" }) {
 				<meta property="og:type" content="website" />
 				<meta property="og:image" content="" />
 				<meta property="og:url" content="" />
-				<meta property="og:description" content="Solution to the Frontend Mentor challenge, code by Cosmo Art" />
+				<meta property="og:description" content="" />
 				<link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
 			</Head>
 			<Header />

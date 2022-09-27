@@ -21,6 +21,11 @@ export default function Home() {
 					</p>
 				</div>
 				<Link href="/destination"><a className={styles.exploreBtn}>Explore</a></Link>
+				<footer className={styles.atributtion}>
+					<small>
+						<p>Made with ♥️ by <a href="https://github.com/cosmoart" target="_blank" rel="noopener noreferrer">Cosmo</a> - <a href="https://github.com/cosmoart/Space-tourism" target="_blank" rel="noopener noreferrer">Repository</a></p>
+					</small>
+				</footer>
 			</main>
 			{/* <img src="Desktop - Home.jpg" alt="" id="bg" /> */}
 			<Background bgMobile={bgMobile.src} bgTablet={bgTablet.src} bgDesktop={bgDesktop.src} />

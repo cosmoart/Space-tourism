@@ -46,13 +46,46 @@ Users should be able to:
 <table>
         <tr>
 		    <td>
-                <img src="./screenshots/mobile.webp" width="100%" title="Mobile solution"  />
+                <img src="./screenshots/home-mobile.webp" width="100%" title="Home mobile solution"  />
             </td>
 			<td>
-                <img src="./screenshots/tablet.webp" width="100%" title="Tablet solution"/>
+                <img src="./screenshots/home-tablet.webp" width="100%" title="Home tablet solution"/>
             </td>
             <td>
-                <img src="./screenshots/desktop.webp" width="100%" title="Desktop solution"/>
+                <img src="./screenshots/home-desktop.webp" width="100%" title="Home desktop solution"/>
+            </td>
+        </tr>
+        <tr>
+		    <td>
+                <img src="./screenshots/destination-mobile.webp" width="100%" title="Destination mobile solution"  />
+            </td>
+			<td>
+                <img src="./screenshots/destination-tablet.webp" width="100%" title="Destination tablet solution"/>
+            </td>
+            <td>
+                <img src="./screenshots/destination-desktop.webp" width="100%" title="Destination desktop solution"/>
+            </td>
+        </tr>
+        <tr>
+		    <td>
+                <img src="./screenshots/crew-mobile.webp" width="100%" title="Crew mobile solution"  />
+            </td>
+			<td>
+                <img src="./screenshots/crew-tablet.webp" width="100%" title="Crew tablet solution"/>
+            </td>
+            <td>
+                <img src="./screenshots/crew-desktop.webp" width="100%" title="Crew desktop solution"/>
+            </td>
+        </tr>
+        <tr>
+		    <td>
+                <img src="./screenshots/tech-mobile.webp" width="100%" title="Technology mobile solution"  />
+            </td>
+			<td>
+                <img src="./screenshots/tech-tablet.webp" width="100%" title="Technology tablet solution"/>
+            </td>
+            <td>
+                <img src="./screenshots/tech-desktop.webp" width="100%" title="Technology desktop solution"/>
             </td>
         </tr>
 </table>
@@ -66,7 +99,7 @@ Users should be able to:
 
 ### Built with
 
--   Mobile-first workflow
+-   mobile-first workflow
 -   Semantic HTML5 markup
 -   [React](https://reactjs.org/) - JS library
 -   [Nextjs](https://nextjs.org)

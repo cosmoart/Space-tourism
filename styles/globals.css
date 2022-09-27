@@ -30,7 +30,11 @@ body {
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: 4.72px;
-	font-size: clamp(20px, 1.6vw, 28px);
+	font-size: clamp(17px, 1.7vw, 28px);
+	padding-bottom: 30px;
+	padding-top: 6px;
+	margin: 0;
+	text-align: center;
 }
 .title span {
 	opacity: 0.25;
@@ -45,28 +49,59 @@ body {
 	color: var(--color-text);
 	max-width: 28.5rem;
 	line-height: clamp(22px, 2.3vw, 28px);
-	font-size: clamp(15px, 1.2vw, 18px);
+	font-size: clamp(15px, 1vw, 18px);
 	letter-spacing: 1px;
 	word-spacing: 2px;
+	margin: auto;
 }
 .mainPage {
-	padding: 0 3rem;
+	padding: 0 2rem;
 	margin: auto;
 	max-width: 75rem;
-	height: 80vh;
+	height: calc(100vh - 63.39px);
+	display: grid;
+	grid-template-rows: auto 1fr;
 }
 li {
 	list-style: none;
+}
+a {
+	color: white;
+	text-decoration: none;
+	letter-spacing: 2.7px;
+}
+@media (min-width: 30rem) {
+	.mainPage {
+		padding: 0 3rem;
+		height: calc(100vh - 66.17px);
+	}
+	.title {
+		padding: 30px 0;
+		text-align: left;
+	}
+}
+@media (min-width: 40rem) {
+	.mainPage {
+		height: calc(100vh - 106.39px);
+	}
+	.paragraph {
+		margin: 0%;
+	}
+}
+@media (min-width: 84em) {
+	.mainPage {
+		height: calc(100vh - 122.39px);
+	}
 }
 
 /* ============ SCROLL-BAR ========= */
 /* width */
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #1f1f27;
+	background: #181929;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {

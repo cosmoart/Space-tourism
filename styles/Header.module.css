@@ -1,5 +1,6 @@
 .header {
-	margin: 15px 20px;
+	padding-block: 15px;
+	padding-inline-start: 20px;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -13,8 +14,6 @@
 	top: 0;
 	right: -100%;
 	background: rgba(255, 255, 255, 4%);
-	display: flex;
-	align-items: center;
 	transition: right 0.2s ease-in-out;
 	overflow: hidden;
 }
@@ -28,10 +27,11 @@
 }
 .navContainer nav ul {
 	display: flex;
-	gap: 1.3rem;
-	padding: 1rem 2rem;
+	gap: 1.5rem;
+	padding: 6rem 2rem;
 	justify-content: space-evenly;
 	flex-direction: column;
+	font-size: 14px;
 }
 .menuBtn {
 	width: 30px;
@@ -64,6 +64,18 @@
 	object-fit: contain;
 	width: 30px;
 }
+
+.currentLink::after {
+	content: "";
+	opacity: 1;
+	height: 100%;
+	width: 3px;
+	position: absolute;
+	right: -2rem;
+	top: 0;
+	background: white;
+	transform: scaleY(1.5);
+}
 .header span {
 	font-weight: bold;
 }
@@ -73,28 +85,35 @@
 	text-transform: uppercase;
 	position: relative;
 }
-.header a {
-	color: white;
-	text-decoration: none;
-	letter-spacing: 2.7px;
-}
-
-@media (min-width: 50em) {
+@media (min-width: 30em) {
 	.header {
-		margin: 1.5rem 0 0 2rem;
+		margin: 0;
+	}
+	.menuBtn {
+		display: none;
+	}
+	.logo {
+		margin-left: 1rem;
 	}
 	.header li::after {
 		content: "";
-		height: 2px;
+		height: 3px;
 		width: 100%;
 		position: absolute;
 		left: 0;
 		background: white;
+		opacity: 0.5;
 		bottom: -2.8rem;
 		transition: bottom 0.2s ease-in-out;
 	}
+	.currentLink::after {
+		opacity: 1 !important;
+		bottom: -2rem !important;
+		top: auto;
+		transform: scaleY(1);
+	}
 	.header li:hover::after {
-		bottom: -2.5rem;
+		bottom: -2rem;
 	}
 	.header a:hover {
 		opacity: 0.8;
@@ -103,42 +122,53 @@
 		height: auto;
 		width: auto;
 		position: static;
-		width: 70%;
 		z-index: 50 !important;
+		font-size: 14px;
 	}
 	.navContainer nav {
 		backdrop-filter: blur(40px);
 		position: static;
 		height: auto;
-		display: block;
+	}
+	.navContainer nav ul {
+		padding: 0.5rem 2rem;
+		flex-direction: row;
+		margin-block: 1rem;
+	}
+}
+
+@media (min-width: 50em) {
+	.logo {
+		width: auto;
+		height: auto;
+	}
+	.header {
+		padding: 1.5rem 0 0 2rem;
+	}
+	.navContainer {
+		width: 65%;
 	}
 	.navContainer nav ul {
 		padding: 1rem 2rem;
-		flex-direction: row;
 	}
 	.header::after {
 		content: "";
 		position: absolute;
-		width: 33%;
+		width: 32%;
 		height: 1px;
 		background: white;
 		top: 50%;
-		left: 4rem;
+		left: 5rem;
 		transform: translateY(-50%);
-		z-index: 5;
-	}
-	.menuBtn {
-		display: none;
-	}
-	.logo {
-		width: auto;
+		z-index: 50;
+		opacity: 0.25;
 	}
 }
 
-@media (min-width: 83em) {
+@media (min-width: 84em) {
 	.header {
-		margin-top: 2.5rem;
-		margin-left: 3.3rem;
+		padding-top: 2.5rem;
+		padding-left: 3.3rem;
 	}
 	.header img {
 		width: auto !important;

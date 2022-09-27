@@ -1,39 +1,35 @@
-.sliderRight {
-	transform: translateX(30rem);
-	position: absolute !important;
-}
-.planetImgHidden {
-	z-index: -10;
-	animation: orbitate 1s ease-in-out;
+.sliderHidden {
+	transform: translateX(40rem);
 	opacity: 0;
-	position: absolute !important;
 }
-@keyframes orbitate {
-	0% {
-		transform: rotate(0deg);
-		opacity: 1;
-	}
-	100% {
-		transform: rotate(360deg);
-		opacity: 0;
-	}
+.imgHidden {
+	z-index: -10;
+	opacity: 0;
+	transform: rotate(360deg);
 }
 .planetsInfo [class*="-card"] {
-	position: relative;
-	transition: transform 0.3s ease-in-out;
+	position: absolute;
+	transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+	width: 100%;
+	margin: auto;
 }
 .planetsMain {
 	display: flex;
-	justify-content: space-around;
-	height: 80%;
+	justify-content: center;
+	height: 100%;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+}
+.planetsNav {
+	margin-top: 15px;
+	overflow: hidden;
 }
 .planetsNav ul {
 	display: flex;
 	gap: 1rem;
 	padding: 0;
+	justify-content: center;
 }
 .planetsNav button {
 	background: none;
@@ -42,71 +38,183 @@
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.linkNavActive::after {
+	bottom: -15px !important;
+	opacity: 1 !important;
+}
 .planetsNav button:hover {
 	color: white;
+}
+.planetsNav li {
+	position: relative;
+}
+.planetsNav li::after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: white;
+	bottom: -20px;
+	left: 0;
+	transition: bottom 0.2s ease-in-out;
+}
+.planetsNav li:hover::after {
+	bottom: -15px;
 }
 .planetTitle {
 	font-family: "Bellefair", system-ui;
 	text-transform: uppercase;
-	font-size: 55px;
-	margin: 14px 0;
+	font-size: clamp(35px, 5vw, 70px);
+	margin: 10px 0;
 }
 .planetTitle + p {
-	max-width: 40rem;
-	border-bottom: 1px solid beige;
+	padding-bottom: 1.8rem;
+	margin-bottom: 0;
+	border-bottom: 1px solid #383b4b;
+	margin: auto;
+	max-width: 33rem;
 }
 .planetData {
 	display: flex;
-	gap: 2rem;
+	flex-direction: column;
 	text-transform: uppercase;
 	font-weight: lighter;
-	font-size: 15px;
+	font-size: 13px;
 	color: var(--color-text);
+	letter-spacing: 2px;
+	justify-content: center;
+	margin-top: 5px;
+}
+.planetData p {
+	margin: 8px;
 }
 .planetData span {
 	font-family: "Bellefair", system-ui;
-	font-size: 25px;
-	margin-top: 10px;
+	font-size: 18px;
 	display: block;
 	color: white;
+	letter-spacing: 0;
+	margin-top: 5px;
 }
 .planetsInfo {
-	overflow: hidden;
 	position: relative;
+	height: 65%;
+	width: 100%;
+	overflow: hidden;
 }
 .planetsImages {
-	max-width: 28rem;
+	width: 100%;
+	height: 35%;
 	position: relative;
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 }
 .planetsImg {
-	position: relative;
-	transition: all 1s ease-in-out;
-	width: 80%;
-	margin-top: 2rem;
-}
-@keyframes orbitate2 {
-	0% {
-		transform: rotate(360deg);
-		opacity: 1;
-	}
-	100% {
-		transform: rotate(0deg);
-		opacity: 0;
-	}
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
 }
 .planetsImg img {
-	width: 50%;
-	padding: 0 5rem;
+	object-fit: contain;
 }
+.planetsImg > * {
+	position: static !important;
+}
+@media (min-width: 30em) {
+	.planetData {
+		flex-direction: row;
+		gap: 2rem;
+	}
+	.planetTitle + p {
+		padding-bottom: 2.5rem;
+	}
+	.planetData p {
+		margin: revert;
+	}
+	.planetData span {
+		margin-top: 10px;
+		font-size: 23px;
+	}
+}
+
 @media (min-width: 50em) {
 	.planetsMain {
 		flex-direction: row;
 		text-align: left;
+		gap: 2rem;
 	}
 	.planetsInfo,
-	.planetsNav {
+	.planetsImages {
 		width: 50%;
+	}
+	.planetsImages {
+		height: 100%;
+	}
+	.planetsInfo {
+		height: 100%;
+		max-width: 24rem;
+	}
+	.planetsNav ul {
+		justify-content: left;
+	}
+	.planetsImg {
+		width: 80%;
+		height: auto;
+		max-width: 23rem;
+		margin-top: 2rem;
+	}
+	.planetTitle {
+		margin: 15px 0;
+	}
+	.planetsImg > * {
+		position: relative !important;
+	}
+	.planetData {
+		justify-content: flex-start;
+	}
+	.planetTitle + p {
+		padding-bottom: 2.5rem;
+	}
+	.planetData p {
+		margin: revert;
+	}
+	.planetData span {
+		margin-top: 10px;
+		font-size: 25px;
+	}
+	.planetsNav li::after {
+		opacity: 0.5;
+	}
+}
+@media (min-width: 87em) {
+	.planetsInfo,
+	.planetsImg {
+		max-width: 26rem;
+	}
+	.planetsNav li {
+		font-size: 20px;
+	}
+	.planetTitle {
+		margin: 20px 0;
+		font-size: 100px;
+	}
+	.planetTitle + p {
+		font-size: 18px;
+		line-height: 32px;
+	}
+	.planetData {
+		font-size: 16px;
+	}
+	.planetData span {
+		font-size: 28px;
+	}
+	.mainPage h1 {
+		padding: 50px 0;
+		font-size: 30px;
+	}
+	.planetsMain {
+		margin-top: 1rem;
 	}
 }

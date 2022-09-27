@@ -8,4 +8,18 @@
 .main a {
 	color: white;
 	text-transform: uppercase;
+	position: relative;
+}
+.main a::after {
+	content: "";
+	height: 2px;
+	background: white;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	transition: width 0.15s ease-in-out;
+	width: 0;
+}
+.main a:hover::after {
+	width: 100%;
 }
