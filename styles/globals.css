@@ -111,3 +111,8 @@ a {
 ::-webkit-scrollbar-thumb:hover {
 	background: rgb(184, 184, 184);
 }
+/* ========= SELECTION ========== */
+::selection {
+	background: #d0d6f9;
+	color: #181929;
+}

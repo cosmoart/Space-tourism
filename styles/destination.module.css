@@ -5,7 +5,6 @@
 .imgHidden {
 	z-index: -10;
 	opacity: 0;
-	transform: rotate(360deg);
 }
 .planetsInfo [class*="-card"] {
 	position: absolute;
@@ -100,7 +99,7 @@
 	position: relative;
 	height: 65%;
 	width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .planetsImages {
 	width: 100%;
@@ -114,7 +113,16 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
+	transition: all 0.7s ease-in-out;
+	animation: rota 160s linear infinite;
+}
+@keyframes rota {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 .planetsImg img {
 	object-fit: contain;

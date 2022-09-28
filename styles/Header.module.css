@@ -139,8 +139,8 @@
 
 @media (min-width: 50em) {
 	.logo {
-		width: auto;
-		height: auto;
+		width: 2.7rem;
+		height: 2.7rem;
 	}
 	.header {
 		padding: 1.5rem 0 0 2rem;
@@ -157,8 +157,8 @@
 		width: 32%;
 		height: 1px;
 		background: white;
-		top: 50%;
-		left: 5rem;
+		top: calc(50% + 0.8rem);
+		left: 7rem;
 		transform: translateY(-50%);
 		z-index: 50;
 		opacity: 0.25;
