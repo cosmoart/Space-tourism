@@ -2,12 +2,12 @@ import Image from "next/image";
 import Layout from "../components/Layout";
 import data from "../assets/data";
 import styles from "../styles/crew.module.css"
-import Background from "./helpers/bodyBackground";
+import Background from "../helpers/bodyBackground";
 
 import bgMobile from "../assets/crew/background-crew-mobile.jpg"
 import bgTablet from "../assets/crew/background-crew-tablet.jpg"
-import bgDesktop from "../assets/crew/background-crew-Desktop.jpg"
-import handleLinks from "./helpers/linksAnimation";
+import bgDesktop from "../assets/crew/background-crew-desktop.jpg"
+import handleLinks from "../helpers/linksAnimation";
 import { useState } from "react";
 
 export default function Crew() {

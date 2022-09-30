@@ -7,8 +7,8 @@ import bgMobile from "../assets/destination/background-destination-mobile.jpg"
 import bgTablet from "../assets/destination/background-destination-tablet.jpg"
 import bgDesktop from "../assets/destination/background-destination-desktop.jpg"
 
-import handleLinks from "./helpers/linksAnimation"
-import Background from "./helpers/bodyBackground"
+import handleLinks from "../helpers/linksAnimation"
+import Background from "../helpers/bodyBackground"
 import { useState } from "react"
 
 export default function Destination() {

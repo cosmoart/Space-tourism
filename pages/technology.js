@@ -2,12 +2,12 @@ import data from "../assets/data";
 import Image from "next/image";
 import Layout from "../components/Layout";
 import styles from "../styles/technology.module.css";
-import Background from "./helpers/bodyBackground";
 
 import bgMobile from "../assets/technology/background-technology-mobile.jpg"
 import bgTablet from "../assets/technology/background-technology-tablet.jpg"
 import bgDesktop from "../assets/technology/background-technology-desktop.jpg"
-import handleLinks from "./helpers/linksAnimation";
+import handleLinks from "../helpers/linksAnimation";
+import Background from "../helpers/bodyBackground";
 import { useState } from "react";
 
 export default function Technology() {
