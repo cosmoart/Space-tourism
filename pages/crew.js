@@ -40,7 +40,7 @@ export default function Crew() {
 								})
 							}
 						</nav>
-						<div>
+						<div className={styles.cardsContainer}>
 							{
 								data.crew.map((crewMember, i) => {
 									return (

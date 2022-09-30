@@ -25,7 +25,8 @@ export default function FollowCursor() {
 			setTimeout(() => {
 				cursor2.style.transform = "scale(1) translate(-50%, -50%)";
 			}, 100);
-		})
+		});
+
 	}, []);
 
 	return (

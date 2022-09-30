@@ -9,7 +9,7 @@
 
 # Space tourism website
 
-This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
+🪐My solution for the famous frontend-mentor challenge "Space tourism", made with react, JS and CSS in NextJS. This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
 [Solution][solution-url] . [Live Page][live-page]
 
@@ -25,9 +25,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
-    -   [Useful resources](#useful-resources)
 -   [Author](#author)
--   [Acknowledgments](#acknowledgments)
 
 </details>
 
@@ -99,31 +97,16 @@ Users should be able to:
 
 ### Built with
 
--   mobile-first workflow
+-   Mobile-first workflow
 -   Semantic HTML5 markup
 -   [React](https://reactjs.org/) - JS library
--   [Nextjs](https://nextjs.org)
+-   [Nextjs](https://nextjs.org) - React framework
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### What I learned
 
-This challenge was a great learning opportunity, it was also very useful to reinforce previous knowledge, and face problems that had not been presented to me before.
-
-To see how you can add code snippets, see below:
-
-```js
-const proudOfThisFunc = () => {
-	console.log("🎉");
-};
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Useful resources
-
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+It was the perfect opportunity to play for the first time with NextJS: Making the css was more difficult than I imagined since NextJS makes some changes in the HTML and CSS (Like the images, the body element, and the css module files) but I was able to solve those problems in different ways like creating a component to change the background of the body or wrapping the NextJS `<Image/>` element with a `<div>`.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -132,15 +115,8 @@ const proudOfThisFunc = () => {
 -   Instagram - [@cosmo_art0](https://www.instagram.com/cosmo_art0/)
 -   Frontend Mentor - [@CosmoArt](https://www.frontendmentor.io/profile/cosmoart)
 -   Twitter - [@CosmoArt0](https://twitter.com/cosmoart0)
--   My personal page - [https://cosmoart.github.io](https://cosmoart.github.io)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Acknowledgments
-
-<!-- Crédito a otras personas con quien trabaje o me inspire -->
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-[live-page]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[solution-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[live-page]: https://space-tourist.vercel.app
+[solution-url]: https://github.com/cosmoart

@@ -6,8 +6,10 @@
 	overflow: hidden;
 	position: relative;
 	height: 100%;
+	width: 100%;
 	text-align: center;
 	gap: 1rem;
+	justify-content: center;
 }
 .crewMain nav {
 	display: flex;
@@ -21,25 +23,35 @@
 }
 .crewMain [class*="-card"] {
 	transition: 0.3s ease-in-out;
+	left: 0;
 }
 .sliderHidden {
-	display: none;
+	position: absolute;
+	top: 0;
+	transform: translateX(-100%);
+	opacity: 0;
+}
+.cardsContainer {
+	position: relative;
 }
 .crewName {
 	text-transform: uppercase;
 	font-family: "Bellefair", system-ui;
+	font-weight: lighter;
 }
 .crewName span:first-child {
-	font-size: clamp(17px, 3vw, 20px);
+	font-size: clamp(23px, 3vw, 26px);
 	opacity: 0.5;
 }
 .crewName span:last-child {
 	font-size: clamp(27px, 5vw, 40px);
+	margin-top: 10px;
+	display: block;
 }
 .crewBtn {
 	border-radius: 100%;
-	width: 15px;
-	height: 15px;
+	width: 13px;
+	height: 13px;
 	background: white;
 	opacity: 0.17;
 	cursor: pointer;
@@ -47,6 +59,7 @@
 }
 .crewBtn:hover {
 	opacity: 0.5;
+	transform: scale(1.1);
 }
 .linkActive {
 	opacity: 1 !important;
@@ -69,18 +82,42 @@
 .crewImg img {
 	object-fit: contain;
 }
-.crewImg * {
+.crewImg > * {
 	position: static !important;
+	height: 100% !important;
 }
 .imgHidden {
-	transform: translateY(10rem);
+	transform: translateX(10rem);
 	opacity: 0;
 	z-index: -10;
+}
+@media (min-width: 40em) {
+	.crewImg {
+		border-bottom: none;
+	}
+	.crewImg img {
+		object-position: bottom;
+	}
+	.crewImages,
+	.crewInfo nav {
+		order: 1;
+	}
+	.crewInfo {
+		justify-content: space-around;
+	}
+	.imgHidden {
+		transform: translateY(10rem);
+	}
+	.crewBtn {
+		width: 15px;
+		height: 15px;
+	}
 }
 @media (min-width: 50em) {
 	.crewMain {
 		flex-direction: row;
 		text-align: left;
+		gap: 0;
 	}
 	.crewMain nav {
 		order: 2;
@@ -90,10 +127,21 @@
 		height: auto;
 		order: initial;
 	}
-	.crewImg {
-		border-bottom: none;
-	}
 	.crewInfo {
 		align-items: flex-start;
+		height: 100%;
+		justify-content: center;
+		gap: 3rem;
+	}
+	.crewBtn {
+		margin-bottom: 3rem;
+	}
+}
+@media (min-width: 84em) {
+	.crewName span:last-child {
+		font-size: 50px;
+	}
+	.crewMain {
+		justify-content: space-around;
 	}
 }

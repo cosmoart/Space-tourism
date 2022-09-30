@@ -26,7 +26,7 @@ export default function Header() {
 	return (
 		<header className={styles.header}>
 			<div className={styles.logo}>
-				<Image src={logoIMG} alt="" />
+				<Image src={logoIMG} alt="Logo" />
 			</div>
 			<div className={styles.navContainer} style={{ zIndex: showMenu ? "50" : "-50" }}>
 				<nav className={`${showMenu ? styles.navShow : ""}`}>

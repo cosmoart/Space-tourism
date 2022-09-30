@@ -37,7 +37,7 @@
 }
 .title span {
 	font-family: "Bellefair";
-	font-size: clamp(75px, 10vw, 105px);
+	font-size: clamp(75px, 20vw, 105px);
 	letter-spacing: 0;
 	color: white;
 	padding-top: 10px;
@@ -134,14 +134,21 @@
 }
 @media (min-width: 87em) {
 	.main > div {
-		margin-top: 17.5%;
-		margin-left: 11.5%;
+		margin-top: 17%;
+		margin-left: 10%;
 	}
 	.exploreBtn {
 		width: 17rem;
 		height: 17rem;
 	}
+	.title {
+		font-size: 28px;
+	}
 	.title span {
 		font-size: 150px;
+	}
+	.main p {
+		max-width: 28rem;
+		line-height: 35px;
 	}
 }

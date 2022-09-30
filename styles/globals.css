@@ -19,12 +19,17 @@
 	font-display: swap;
 	font-weight: 700;
 }
-
 body {
 	font-family: "BarlowCondensed", system-ui;
 	color: white;
 	font-weight: 400;
 	background-color: #181929;
+}
+#bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
 }
 .title {
 	text-transform: uppercase;
@@ -42,7 +47,7 @@ body {
 .subtitle {
 	font-family: "Bellefair", system-ui;
 	text-transform: uppercase;
-	font-size: clamp(35px, 3vw, 40px);
+	font-size: clamp(27px, 4vw, 40px);
 	margin: 10px 0;
 }
 .paragraph {
@@ -82,15 +87,23 @@ a {
 }
 @media (min-width: 40rem) {
 	.mainPage {
-		height: calc(100vh - 106.39px);
+		height: calc(100vh - 66.39px);
 	}
 	.paragraph {
 		margin: 0%;
 	}
 }
+@media (min-width: 50rem) {
+	.mainPage {
+		height: calc(100vh - 106.39px);
+	}
+}
 @media (min-width: 84em) {
 	.mainPage {
-		height: calc(100vh - 122.39px);
+		height: calc(100vh - 149px);
+	}
+	.subtitle {
+		font-size: 50px;
 	}
 }
 
@@ -115,4 +128,10 @@ a {
 ::selection {
 	background: #d0d6f9;
 	color: #181929;
+}
+/* ======= FOCUS =========== */
+:focus-visible {
+	outline: 3px dashed #d0d6f9;
+	outline-offset: 4px;
+	border-radius: 2px;
 }

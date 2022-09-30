@@ -27,7 +27,6 @@ export default function Home() {
 					</small>
 				</footer>
 			</main>
-			{/* <img src="Desktop - Home.jpg" alt="" id="bg" /> */}
 			<Background bgMobile={bgMobile.src} bgTablet={bgTablet.src} bgDesktop={bgDesktop.src} />
 		</Layout>
 	)

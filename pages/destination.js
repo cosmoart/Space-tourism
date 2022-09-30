@@ -39,32 +39,34 @@ export default function Destination() {
 							})
 						}
 					</div>
-					<div className={styles.planetsInfo}>
-						<nav className={styles.planetsNav}>
-							<ul>
-								{
-									data.planets.map((planet) => {
-										return (
-											<li key={planet.distance} className={linkActive === planet.name ? styles.linkNavActive : ""}>
-												<button onClick={handleNav} value={planet.name}>{planet.name}</button>
-											</li>
-										)
-									})
-								}
-							</ul>
-						</nav>
-						{
-							data.planets.map((planet, i) => (
-								<article key={planet.distance} className={`${i === 0 ? "" : styles.sliderHidden} ${planet.name + "-card"}`}>
-									<h2 className={styles.planetTitle}>{planet.name}</h2>
-									<p className="paragraph">{planet.description}</p>
-									<div className={styles.planetData}>
-										<p>Avg. Distance <br /><span>{planet.distance}</span></p>
-										<p>Est. Travel time <br /><span>{planet.travel}</span></p>
-									</div>
-								</article>
-							))
-						}
+					<div className={styles.planetInfoContainer}>
+						<div className={styles.planetsInfo}>
+							<nav className={styles.planetsNav}>
+								<ul>
+									{
+										data.planets.map((planet) => {
+											return (
+												<li key={planet.distance} className={linkActive === planet.name ? styles.linkNavActive : ""}>
+													<button onClick={handleNav} value={planet.name}>{planet.name}</button>
+												</li>
+											)
+										})
+									}
+								</ul>
+							</nav>
+							{
+								data.planets.map((planet, i) => (
+									<article key={planet.distance} className={`${i === 0 ? "" : styles.sliderHidden} ${planet.name + "-card"}`}>
+										<h2 className={styles.planetTitle}>{planet.name}</h2>
+										<p className="paragraph">{planet.description}</p>
+										<div className={styles.planetData}>
+											<p>Avg. Distance <br /><span>{planet.distance}</span></p>
+											<p>Est. Travel time <br /><span>{planet.travel}</span></p>
+										</div>
+									</article>
+								))
+							}
+						</div>
 					</div>
 				</div>
 			</main>
