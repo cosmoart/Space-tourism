@@ -25,7 +25,7 @@ export default function Home() {
 				<Link href="/destination"><a className={styles.exploreBtn}>Explore</a></Link>
 				<footer className={styles.atributtion}>
 					<small>
-						<p>Made with ♥️ by <a href="https://github.com/cosmoart" target="_blank" rel="noopener noreferrer">Cosmo</a> - <a href="https://github.com/cosmoart/Space-tourism" target="_blank" rel="noopener noreferrer">Repository</a></p>
+						<span>Made with ♥️ by <a href="https://github.com/cosmoart" target="_blank" rel="noopener noreferrer">Cosmo</a> - <a href="https://github.com/cosmoart/Space-tourism" target="_blank" rel="noopener noreferrer">Repository</a></span>
 					</small>
 				</footer>
 			</main>
