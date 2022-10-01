@@ -1,15 +1,17 @@
 import Link from 'next/link'
-import styles from '../styles/index.module.css'
-import Layout from '../components/Layout'
-import Background from '../helpers/bodyBackground'
+import Head from 'next/head'
 
-import bgMobile from "../assets/home/background-home-mobile.jpg"
-import bgTablet from "../assets/home/background-home-tablet.jpg"
-import bgDesktop from "../assets/home/background-home-desktop.jpg"
+import styles from '../styles/index.module.css'
 
 export default function Home() {
 	return (
-		<Layout title='Space tourism | Home'>
+		<>
+			<Head>
+				<title>Space tourism | Home</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta property="og:title" content="Space tourism | Home" />
+				<meta property="og:image" content="https://github.com/cosmoart/Space-tourism/raw/main/screenshots/home-desktop.webp" />
+			</Head>
 			<main className={styles.main}>
 				<div>
 					<h1 className={styles.title}>So, you want to travel to <br /><span>Space</span></h1>
@@ -27,7 +29,7 @@ export default function Home() {
 					</small>
 				</footer>
 			</main>
-			<Background bgMobile={bgMobile.src} bgTablet={bgTablet.src} bgDesktop={bgDesktop.src} />
-		</Layout>
+			<div id={styles.bg}></div>
+		</>
 	)
 }

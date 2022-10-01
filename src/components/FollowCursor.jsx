@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import styles from "../styles/followCursor.module.css";
+import styles from "../styles/FollowCursor.module.css";
 
 export default function FollowCursor() {
 	useEffect(() => {

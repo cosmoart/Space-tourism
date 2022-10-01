@@ -1,14 +1,10 @@
-import Image from "next/image";
-import Layout from "../components/Layout";
-import data from "../assets/data";
-import styles from "../styles/crew.module.css"
-import Background from "../helpers/bodyBackground";
-
-import bgMobile from "../assets/crew/background-crew-mobile.jpg"
-import bgTablet from "../assets/crew/background-crew-tablet.jpg"
-import bgDesktop from "../assets/crew/background-crew-desktop.jpg"
-import handleLinks from "../helpers/linksAnimation";
 import { useState } from "react";
+import Image from "next/future/image";
+import Head from "next/head";
+
+import styles from "../styles/crew.module.css"
+import handleLinks from "../helpers/linksAnimation";
+import data from "../assets/data";
 
 export default function Crew() {
 	const [linkActive, setLinkActive] = useState(data.crew[0].name.replace(/\s+/g, ''));
@@ -19,7 +15,13 @@ export default function Crew() {
 	}
 
 	return (
-		<Layout title="Space tourism | Crew">
+		<>
+			<Head>
+				<title>Space tourism | Crew</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta property="og:title" content="Space tourism | Crew" />
+				<meta property="og:image" content="https://github.com/cosmoart/Space-tourism/raw/main/screenshots/crew-desktop.webp" />
+			</Head>
 			<main className="mainPage">
 				<h1 className="title"><span>02</span> Meet your crew</h1>
 				<div className={styles.crewMain}>
@@ -78,8 +80,18 @@ export default function Crew() {
 						}
 					</div>
 				</div>
+				<div id={styles.bg}></div>
+				<style jsx global>
+					{`
+					#__next{
+						min-height: 100vh;
+					}
+					.mainPage{
+						height: 100%;
+					}
+					`}
+				</style>
 			</main>
-			<Background bgMobile={bgMobile.src} bgTablet={bgTablet.src} bgDesktop={bgDesktop.src} />
-		</Layout >
+		</>
 	)
 }

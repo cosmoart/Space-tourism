@@ -34,8 +34,6 @@
 	font-size: 14px;
 }
 .menuBtn {
-	width: 30px;
-	height: 30px;
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -43,6 +41,11 @@
 	right: 0;
 	margin-right: 10px;
 	z-index: 80;
+}
+.menuBtn img {
+	width: 22px;
+	height: 18px;
+	object-fit: contain;
 }
 .navMobile {
 	position: absolute;
@@ -147,8 +150,8 @@
 
 @media (min-width: 50em) {
 	.logo {
-		width: 2.7rem;
-		height: 2.7rem;
+		width: 2.5rem;
+		height: 2.5rem;
 	}
 	.header {
 		padding: 1.5rem 0 0 2rem;
@@ -192,7 +195,7 @@
 	}
 }
 
-@media (min-width: 84em) {
+@media (min-width: 86em) {
 	.header li {
 		font-size: 20px;
 	}

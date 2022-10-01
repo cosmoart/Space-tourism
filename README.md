@@ -106,7 +106,9 @@ Users should be able to:
 
 ### What I learned
 
-It was the perfect opportunity to play for the first time with NextJS: Making the css was more difficult than I imagined since NextJS makes some changes in the HTML and CSS (Like the images, the body element, and the css module files) but I was able to solve those problems in different ways like creating a component to change the background of the body or wrapping the NextJS `<Image/>` element with a `<div>`.
+It was the perfect opportunity to play around with NextJS for the first time. Making the css was more difficult than I imagined since NextJS makes some changes to the HTML and CSS (such as images and css module files) but I was able to solve those problems by reading the documentation and doing some research.
+
+Another complication when making the styles was the slider animations of the cards that needed all the cards to be in the HTML and not just one that changed with a state, which would have been much simpler but without cool animations.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

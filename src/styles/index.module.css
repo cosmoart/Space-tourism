@@ -1,5 +1,5 @@
 .atributtion {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	right: 10px;
 	text-transform: uppercase;
@@ -21,8 +21,8 @@
 	gap: 2rem;
 	padding-top: 1.5rem;
 	padding-inline: 1.5rem;
-	height: 80vh;
 	max-height: 60rem;
+	width: 100%;
 }
 .main p {
 	padding-top: 5px;
@@ -106,7 +106,6 @@
 		display: block;
 		text-align: left;
 		gap: 0;
-		height: 75vh;
 		margin: auto;
 		max-width: 94rem;
 	}
@@ -150,5 +149,29 @@
 	.main p {
 		max-width: 28rem;
 		line-height: 35px;
+	}
+}
+#bg {
+	background: url(../assets/home/background-home-mobile.jpg), #181929;
+	background-size: 100vw 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1000;
+}
+@media (min-width: 30em) {
+	#bg {
+		background: url(../assets/home/background-home-tablet.jpg), #181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
+	}
+}
+@media (min-width: 50em) {
+	#bg {
+		background: url(../assets/home/background-home-desktop.jpg), #181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
 	}
 }

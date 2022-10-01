@@ -1,0 +1,50 @@
+.main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+}
+.main a {
+	color: white;
+	text-transform: uppercase;
+	position: relative;
+}
+.main a::after {
+	content: "";
+	height: 2px;
+	background: white;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	transition: width 0.15s ease-in-out;
+	width: 0;
+}
+.main a:hover::after {
+	width: 100%;
+}
+#bg {
+	background: url(../assets/home/background-home-mobile.jpg), #181929;
+	background-size: 100vw 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1000;
+}
+@media (min-width: 30em) {
+	#bg {
+		background: url(../assets/home/background-home-tablet.jpg), #181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
+	}
+}
+@media (min-width: 50em) {
+	#bg {
+		background: url(../assets/home/background-home-desktop.jpg), #181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
+	}
+}

@@ -33,17 +33,6 @@
 	transition: 0.3s ease-in-out;
 	padding: 0 2.5rem;
 }
-.techImages * {
-	height: 100% !important;
-	width: 100% !important;
-}
-.techImages {
-	overflow: hidden;
-	position: relative;
-	order: -1;
-	width: 100%;
-	height: 35%;
-}
 .techBtn {
 	width: 3rem;
 	height: 3rem;
@@ -71,13 +60,18 @@
 .infoContainer {
 	position: relative;
 }
+.techImages {
+	overflow: hidden;
+	position: relative;
+	order: -1;
+	width: 100%;
+	height: 33vh;
+}
 .techImg {
 	transition: 0.3s ease-in-out;
-}
-.techImg img {
 	object-fit: cover;
-	height: 0 !important;
 	object-position: top;
+	width: 100%;
 }
 @media (min-width: 50em) {
 	.techNav {
@@ -86,7 +80,6 @@
 	.main {
 		flex-direction: row;
 		padding-left: 3rem;
-		height: 87%;
 		gap: 3rem;
 		text-align: left;
 	}
@@ -96,10 +89,16 @@
 		right: 0;
 		height: 70%;
 		width: 40%;
+		display: flex;
+		justify-content: right;
+	}
+	.techImg {
+		height: 90%;
+		width: 90%;
 	}
 	.infoContainer {
 		width: 40%;
-		max-width: 25rem;
+		max-width: 27rem;
 		overflow: hidden;
 	}
 	.infoContainer [class*="-card"] {
@@ -112,11 +111,38 @@
 		line-height: 4rem;
 	}
 }
-@media (min-width: 84em) {
+@media (min-width: 87em) {
 	.infoContainer {
 		max-width: 31rem;
 	}
 	.terminology {
 		font-size: 18px;
+	}
+}
+#bg {
+	background: url(../assets/technology/background-technology-mobile.jpg),
+		#181929;
+	background-size: 100vw 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1000;
+}
+@media (min-width: 30em) {
+	#bg {
+		background: url(../assets/technology/background-technology-tablet.jpg),
+			#181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
+	}
+}
+@media (min-width: 50em) {
+	#bg {
+		background: url(../assets/technology/background-technology-desktop.jpg),
+			#181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
 	}
 }

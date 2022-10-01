@@ -1,15 +1,10 @@
-import Image from "next/image"
-import Layout from "../components/Layout"
-import data from "../assets/data"
-import styles from "../styles/destination.module.css"
-
-import bgMobile from "../assets/destination/background-destination-mobile.jpg"
-import bgTablet from "../assets/destination/background-destination-tablet.jpg"
-import bgDesktop from "../assets/destination/background-destination-desktop.jpg"
-
-import handleLinks from "../helpers/linksAnimation"
-import Background from "../helpers/bodyBackground"
 import { useState } from "react"
+import Image from "next/future/image"
+import Head from "next/head"
+
+import data from "../assets/data"
+import handleLinks from "../helpers/linksAnimation"
+import styles from "../styles/destination.module.css"
 
 export default function Destination() {
 	const [linkActive, setLinkActive] = useState(data.planets[0].name);
@@ -20,7 +15,13 @@ export default function Destination() {
 	}
 
 	return (
-		<Layout title="Space tourism | Destination">
+		<>
+			<Head>
+				<title>Space tourism | Destination</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta property="og:title" content="Space tourism | Destination" />
+				<meta property="og:image" content="https://github.com/cosmoart/Space-tourism/raw/main/screenshots/destination-desktop.webp" />
+			</Head>
 			<main className={`mainPage ${styles.mainPage}`}>
 				<h1 className="title"><span>01</span> Pick your destination</h1>
 				<div className={styles.planetsMain}>
@@ -28,12 +29,13 @@ export default function Destination() {
 						{
 							data.planets.map((planet, i) => {
 								return (
-									<div
+									<Image
+										placeholder="blur"
+										src={planet.image}
+										alt={`${planet.name} photography`}
 										className={`${styles.planetsImg} ${planet.name}-img  ${i === 0 ? "" : styles.imgHidden}`}
 										key={planet.distance}
-									>
-										<Image placeholder="blur" width={planet.image.width} height={planet.image.height} src={planet.image} alt={`${planet.name} photography`} />
-									</div>
+									/>
 								)
 
 							})
@@ -70,7 +72,7 @@ export default function Destination() {
 					</div>
 				</div>
 			</main>
-			<Background bgMobile={bgMobile.src} bgTablet={bgTablet.src} bgDesktop={bgDesktop.src} />
-		</Layout>
+			<div id={styles.bg}></div>
+		</>
 	)
 }

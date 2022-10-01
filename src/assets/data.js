@@ -3,12 +3,12 @@ import marsIMG from "../assets/destination/image-mars.webp";
 import europaIMG from "../assets/destination/image-europa.webp";
 import titanIMG from "../assets/destination/image-titan.webp";
 
-import launchPortraitIMG from "/assets/technology/image-launch-vehicle-portrait.jpg";
-import launchLandscapeIMG from "/assets/technology/image-launch-vehicle-landscape.jpg";
-import spaceportPortraitIMG from "/assets/technology/image-spaceport-portrait.jpg";
-import spaceportLandscapeIMG from "/assets/technology/image-spaceport-landscape.jpg";
-import capsulePortraitIMG from "/assets/technology/image-space-capsule-portrait.jpg";
-import capsuleLandscapeIMG from "/assets/technology/image-space-capsule-landscape.jpg";
+import launchPortraitIMG from "../assets/technology/image-launch-vehicle-portrait.jpg";
+import launchLandscapeIMG from "../assets/technology/image-launch-vehicle-landscape.jpg";
+import spaceportPortraitIMG from "../assets/technology/image-spaceport-portrait.jpg";
+import spaceportLandscapeIMG from "../assets/technology/image-spaceport-landscape.jpg";
+import capsulePortraitIMG from "../assets/technology/image-space-capsule-portrait.jpg";
+import capsuleLandscapeIMG from "../assets/technology/image-space-capsule-landscape.jpg";
 
 import douglasIMG from "../assets/crew/image-douglas-hurley.webp";
 import markIMG from "../assets/crew/image-mark-shuttleworth.webp";

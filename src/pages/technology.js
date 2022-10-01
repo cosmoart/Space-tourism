@@ -1,14 +1,10 @@
-import data from "../assets/data";
-import Image from "next/image";
-import Layout from "../components/Layout";
-import styles from "../styles/technology.module.css";
-
-import bgMobile from "../assets/technology/background-technology-mobile.jpg"
-import bgTablet from "../assets/technology/background-technology-tablet.jpg"
-import bgDesktop from "../assets/technology/background-technology-desktop.jpg"
-import handleLinks from "../helpers/linksAnimation";
-import Background from "../helpers/bodyBackground";
 import { useState } from "react";
+import Image from "next/future/image";
+import Head from "next/head";
+
+import data from "../assets/data";
+import handleLinks from "../helpers/linksAnimation";
+import styles from "../styles/technology.module.css";
 
 export default function Technology() {
 	const [linkActive, setLinkActive] = useState(data.technologies[0].name.replace(/\s+/g, ''));
@@ -19,7 +15,13 @@ export default function Technology() {
 	}
 
 	return (
-		<Layout title="Space tourism | Technology">
+		<>
+			<Head>
+				<title>Space tourism | Technology</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta property="og:title" content="Space tourism | Technology" />
+				<meta property="og:image" content="https://github.com/cosmoart/Space-tourism/raw/main/screenshots/tech-desktop.webp" />
+			</Head>
 			<main className={`mainPage ${styles.mainPage}`}>
 				<h1 className={`title ${styles.title}`}><span>03</span> SPACE LAUNCH 101</h1>
 				<div className={styles.main}>
@@ -46,7 +48,7 @@ export default function Technology() {
 									key={technology.name}
 									className={`${technology.name.replace(/\s+/g, '')}-card ${i === 0 ? "" : styles.sliderHidden}`}
 								>
-									<p className={styles.terminology}>The terminology...</p>
+									<span className={styles.terminology}>The terminology...</span>
 									<h2 className="subtitle">{technology.name}</h2>
 									<p className="paragraph">{technology.description}</p>
 								</article>
@@ -57,19 +59,30 @@ export default function Technology() {
 						{
 							data.technologies.map((technology, i) => {
 								return (
-									<div
-										key={technology.name + "img"}
+									<Image
 										className={`${styles.techImg} ${technology.name.replace(/\s+/g, '')}-img ${i === 0 ? "" : styles.imgHidden}`}
-									>
-										<Image src={technology.images.portrait} alt={technology.name} placeholder="blur" />
-									</div>
+										key={technology.name + "img"}
+										src={technology.images.portrait}
+										alt={technology.name}
+										placeholder="blur"
+									/>
 								)
 							})
 						}
 					</div>
 				</div>
 			</main>
-			<Background bgMobile={bgMobile.src} bgTablet={bgTablet.src} bgDesktop={bgDesktop.src} />
-		</Layout >
+			<div id={styles.bg}></div>
+			<style jsx global>
+				{`
+					#__next{
+						min-height: 100vh;
+					}
+					.mainPage{
+						height: 100%;
+					}
+					`}
+			</style>
+		</>
 	)
 }

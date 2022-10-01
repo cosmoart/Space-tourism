@@ -8,6 +8,7 @@
 .imgHidden {
 	z-index: -10;
 	opacity: 0;
+	position: absolute !important;
 }
 .planetsInfo [class*="-card"] {
 	position: relative;
@@ -111,18 +112,17 @@
 }
 .planetsImages {
 	width: 100%;
-	height: 35%;
+	height: 25vh;
 	position: relative;
-	display: flex;
-	justify-content: center;
 	overflow: hidden;
 }
 .planetsImg {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	height: 100%;
 	transition: all 0.7s ease-in-out;
 	animation: orbit 160s linear infinite;
+	object-fit: contain;
 }
 @keyframes orbit {
 	0% {
@@ -164,6 +164,8 @@
 	.planetsImages {
 		height: 100%;
 		width: 50%;
+		display: flex;
+		justify-content: center;
 		align-items: center;
 	}
 	.planetsInfo {
@@ -241,5 +243,32 @@
 		display: flex;
 		justify-content: center;
 		margin-bottom: 4rem;
+	}
+}
+#bg {
+	background: url(../assets/destination/background-destination-mobile.jpg),
+		#181929;
+	background-size: 100vw 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1000;
+}
+@media (min-width: 30em) {
+	#bg {
+		background: url(../assets/destination/background-destination-tablet.jpg),
+			#181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
+	}
+}
+@media (min-width: 50em) {
+	#bg {
+		background: url(../assets/destination/background-destination-desktop.jpg),
+			#181929;
+		background-size: 100vw 100vh;
+		background-attachment: fixed;
 	}
 }
