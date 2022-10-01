@@ -121,4 +121,4 @@ Another complication when making the styles was the slider animations of the car
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 [live-page]: https://space-tourist.vercel.app
-[solution-url]: https://github.com/cosmoart
+[solution-url]: https://www.frontendmentor.io/solutions/space-tourism-solution-in-nextjs-OMUOrt3m__
