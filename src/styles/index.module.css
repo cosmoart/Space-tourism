@@ -132,6 +132,9 @@
 	}
 }
 @media (min-width: 87em) {
+	.main {
+		padding-top: 11px;
+	}
 	.main > div {
 		margin-top: 17%;
 		margin-left: 10%;

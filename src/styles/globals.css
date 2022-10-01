@@ -25,16 +25,9 @@ body {
 	font-weight: 400;
 	background-color: #181929;
 }
-#bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0.5;
-}
 #__next {
 	display: grid;
 	grid-template-rows: auto 1fr;
-	/* min-height: 100vh; */
 }
 .title {
 	text-transform: uppercase;
