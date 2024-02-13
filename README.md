@@ -102,7 +102,7 @@ Users should be able to:
 -   [React](https://reactjs.org/) - JS library
 -   [Nextjs](https://nextjs.org) - React framework
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">⬆️ Back to top</a></p>
 
 ### What I learned
 
@@ -110,15 +110,16 @@ It was the perfect opportunity to play around with NextJS for the first time. Ma
 
 Another complication when making the styles was the slider animations of the cards that needed all the cards to be in the HTML and not just one that changed with a state, which would have been much simpler but without cool animations.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">⬆️ Back to top</a></p>
 
 ## Author
 
+-   My website - [cosmoart.vercel.app](https://cosmoart.vercel.app)
 -   Instagram - [@cosmo_art0](https://www.instagram.com/cosmo_art0/)
 -   Frontend Mentor - [@CosmoArt](https://www.frontendmentor.io/profile/cosmoart)
 -   Twitter - [@CosmoArt0](https://twitter.com/cosmoart0)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">⬆️ Back to top</a></p>
 
 [live-page]: https://space-tourist.vercel.app
 [solution-url]: https://www.frontendmentor.io/solutions/space-tourism-solution-in-nextjs-OMUOrt3m__
